@@ -157,3 +157,200 @@ THREADS=32
 THREADS=64
 98812	./test/dbbench
 98816	./test
+
+pi@raspberrypi:~/ustar-sandbox/leveldb/build $ ./bench.sh >> ../base.log3
+LevelDB:    version 1.22
+Date:       Sun Dec 29 17:14:56 2019
+CPU:        4 * ARMv7 Processor rev 4 (v7l)
+CPUCache:   
+... crc=Command being timed: "./db_bench --num=400000"
+	User time (seconds): 66.34
+	System time (seconds): 28.05
+	Percent of CPU this job got: 66%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:21.36
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 20752
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 13083
+	Voluntary context switches: 19990
+	Involuntary context switches: 3367
+	Swaps: 0
+	File system inputs: 8
+	File system outputs: 1156888
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+LevelDB:    version 1.22
+Date:       Sun Dec 29 17:17:17 2019
+CPU:        4 * ARMv7 Processor rev 4 (v7l)
+CPUCache:   
+... crc=Command being timed: "./db_bench --num=400000 --use_existing_db=1 --threads=1"
+	User time (seconds): 49.83
+	System time (seconds): 18.20
+	Percent of CPU this job got: 68%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:39.66
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 17552
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 10276
+	Voluntary context switches: 17240
+	Involuntary context switches: 2594
+	Swaps: 0
+	File system inputs: 16
+	File system outputs: 601136
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+LevelDB:    version 1.22
+Date:       Sun Dec 29 17:18:57 2019
+CPU:        4 * ARMv7 Processor rev 4 (v7l)
+CPUCache:   
+... crc=Command being timed: "./db_bench --num=400000 --use_existing_db=1 --threads=2"
+	User time (seconds): 95.48
+	System time (seconds): 40.37
+	Percent of CPU this job got: 108%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:04.93
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 25524
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 8373
+	Voluntary context switches: 580514
+	Involuntary context switches: 5968
+	Swaps: 0
+	File system inputs: 32
+	File system outputs: 848240
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+LevelDB:    version 1.22
+Date:       Sun Dec 29 17:21:02 2019
+CPU:        4 * ARMv7 Processor rev 4 (v7l)
+CPUCache:   
+... crc=Command being timed: "./db_bench --num=400000 --use_existing_db=1 --threads=4"
+	User time (seconds): 270.73
+	System time (seconds): 125.82
+	Percent of CPU this job got: 176%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:44.72
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 33372
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 18929
+	Voluntary context switches: 1828874
+	Involuntary context switches: 149626
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 1594032
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+LevelDB:    version 1.22
+Date:       Sun Dec 29 17:24:46 2019
+CPU:        4 * ARMv7 Processor rev 4 (v7l)
+CPUCache:   
+... crc=Command being timed: "./db_bench --num=400000 --use_existing_db=1 --threads=8"
+	User time (seconds): 538.67
+	System time (seconds): 256.80
+	Percent of CPU this job got: 168%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 7:52.57
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 42572
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 34870
+	Voluntary context switches: 4566540
+	Involuntary context switches: 442488
+	Swaps: 0
+	File system inputs: 104
+	File system outputs: 2917360
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+LevelDB:    version 1.22
+Date:       Sun Dec 29 17:32:39 2019
+CPU:        4 * ARMv7 Processor rev 4 (v7l)
+CPUCache:   
+... crc=Command being timed: "./db_bench --num=400000 --use_existing_db=1 --threads=16"
+	User time (seconds): 1052.69
+	System time (seconds): 504.95
+	Percent of CPU this job got: 182%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 14:14.20
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 42456
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 58432
+	Voluntary context switches: 10220663
+	Involuntary context switches: 776905
+	Swaps: 0
+	File system inputs: 248
+	File system outputs: 5407120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+LevelDB:    version 1.22
+Date:       Sun Dec 29 17:46:53 2019
+CPU:        4 * ARMv7 Processor rev 4 (v7l)
+CPUCache:   
+^CCommand terminated by signal 2                    
+	Command being timed: "./db_bench --num=400000 --use_existing_db=1 --threads=32"
+	User time (seconds): 14.25
+	System time (seconds): 14.24
+	Percent of CPU this job got: 127%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:22.27
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 44028
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 21631
+	Voluntary context switches: 838245
+	Involuntary context switches: 44055
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 327248
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+LevelDB:    version 1.22
+Date:       Sun Dec 29 17:47:15 2019
+CPU:        4 * ARMv7 Processor rev 4 (v7l)
+CPUCache:   
+
