@@ -1,0 +1,205 @@
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    100000
+RawSize:    11.1 MB (estimated)
+FileSize:   6.3 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+fillseq      :      29.279 micros/op;    3.8 MB/s
+fillsync     :    9986.720 micros/op;    0.0 MB/s (100 ops)
+fillrandom   :      24.587 micros/op;    4.5 MB/s
+overwrite    :      22.654 micros/op;    4.9 MB/s
+readrandom   :      23.339 micros/op; (100000 of 100000 found)
+readrandom   :      17.245 micros/op; (100000 of 100000 found)
+readseq      :       2.761 micros/op;   40.1 MB/s
+readreverse  :       5.955 micros/op;   18.6 MB/s
+compact      : 9019872.000 micros/op;
+readrandom   :      13.944 micros/op; (100000 of 100000 found)
+readseq      :       1.097 micros/op;  100.9 MB/s
+readreverse  :       2.407 micros/op;   46.0 MB/s
+fill100K     :   10170.930 micros/op;    9.4 MB/s (100 ops)
+crc32c       :      11.876 micros/op;  328.9 MB/s (4K per op)
+snappycomp   :   22515.000 micros/op; (snappy failure)
+snappyuncomp :   22992.000 micros/op; (snappy failure)
+THREADS=1
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    100000
+RawSize:    11.1 MB (estimated)
+FileSize:   6.3 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+fillseq      : skipped (--use_existing_db is true)
+fillsync     : skipped (--use_existing_db is true)
+fillrandom   : skipped (--use_existing_db is true)
+overwrite    :      23.205 micros/op;    4.8 MB/s
+readrandom   :      25.304 micros/op; (100000 of 100000 found)
+readrandom   :      17.417 micros/op; (100000 of 100000 found)
+readseq      :       1.933 micros/op;   57.2 MB/s
+readreverse  :       3.653 micros/op;   30.3 MB/s
+compact      : 5801489.000 micros/op;
+readrandom   :      14.186 micros/op; (100000 of 100000 found)
+readseq      :       1.112 micros/op;   99.5 MB/s
+readreverse  :       2.441 micros/op;   45.3 MB/s
+fill100K     : skipped (--use_existing_db is true)
+crc32c       :      11.512 micros/op;  339.3 MB/s (4K per op)
+snappycomp   :   23299.000 micros/op; (snappy failure)
+snappyuncomp :   23431.000 micros/op; (snappy failure)
+7120	./test/dbbench
+7124	./test
+THREADS=2
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    100000
+RawSize:    11.1 MB (estimated)
+FileSize:   6.3 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+fillseq      : skipped (--use_existing_db is true)
+fillsync     : skipped (--use_existing_db is true)
+fillrandom   : skipped (--use_existing_db is true)
+overwrite    :      65.156 micros/op;    3.4 MB/s
+readrandom   :      39.875 micros/op; (100000 of 100000 found)
+readrandom   :      27.352 micros/op; (100000 of 100000 found)
+readseq      :       3.204 micros/op;   69.0 MB/s
+readreverse  :       6.543 micros/op;   33.8 MB/s
+compact      : 16985073.000 micros/op;
+readrandom   :      17.191 micros/op; (100000 of 100000 found)
+readseq      :       1.298 micros/op;  170.5 MB/s
+readreverse  :       2.627 micros/op;   84.2 MB/s
+fill100K     : skipped (--use_existing_db is true)
+crc32c       :      11.578 micros/op;  672.0 MB/s (4K per op)
+snappycomp   :   25859.000 micros/op; (snappy failure)
+snappyuncomp :   50453.000 micros/op; (snappy failure)
+9740	./test/dbbench
+9744	./test
+THREADS=4
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    100000
+RawSize:    11.1 MB (estimated)
+FileSize:   6.3 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+fillseq      : skipped (--use_existing_db is true)
+fillsync     : skipped (--use_existing_db is true)
+fillrandom   : skipped (--use_existing_db is true)
+overwrite    :     141.047 micros/op;    3.1 MB/s
+readrandom   :      69.913 micros/op; (100000 of 100000 found)
+readrandom   :      30.645 micros/op; (100000 of 100000 found)
+readseq      :       3.481 micros/op;  114.0 MB/s
+readreverse  :       6.494 micros/op;   67.4 MB/s
+compact      : 49471104.000 micros/op;
+readrandom   :      22.693 micros/op; (100000 of 100000 found)
+readseq      :       1.462 micros/op;  292.5 MB/s
+readreverse  :       2.728 micros/op;  152.0 MB/s
+fill100K     : skipped (--use_existing_db is true)
+crc32c       :      11.736 micros/op; 1276.1 MB/s (4K per op)
+snappycomp   :   29504.500 micros/op; (snappy failure)
+snappyuncomp :  113514.000 micros/op; (snappy failure)
+11080	./test/dbbench
+11084	./test
+THREADS=8
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    100000
+RawSize:    11.1 MB (estimated)
+FileSize:   6.3 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+fillseq      : skipped (--use_existing_db is true)
+fillsync     : skipped (--use_existing_db is true)
+fillrandom   : skipped (--use_existing_db is true)
+overwrite    :     412.515 micros/op;    2.0 MB/s
+readrandom   :     102.825 micros/op; (100000 of 100000 found)
+readrandom   :      56.593 micros/op; (100000 of 100000 found)
+readseq      :       5.696 micros/op;  146.0 MB/s
+readreverse  :      12.874 micros/op;   66.7 MB/s
+compact      : 145919451.000 micros/op;
+readrandom   :      46.039 micros/op; (100000 of 100000 found)
+readseq      :       2.348 micros/op;  329.3 MB/s
+readreverse  :       4.866 micros/op;  167.9 MB/s
+fill100K     : skipped (--use_existing_db is true)
+crc32c       :      22.820 micros/op; 1318.3 MB/s (4K per op)
+snappycomp   :   57878.750 micros/op; (snappy failure)
+snappyuncomp :  451444.000 micros/op; (snappy failure)
+11292	./test/dbbench
+11296	./test
+THREADS=16
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    100000
+RawSize:    11.1 MB (estimated)
+FileSize:   6.3 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+fillseq      : skipped (--use_existing_db is true)
+fillsync     : skipped (--use_existing_db is true)
+fillrandom   : skipped (--use_existing_db is true)
+overwrite    :     840.975 micros/op;    2.0 MB/s
+readrandom   :     188.611 micros/op; (100000 of 100000 found)
+readrandom   :     112.778 micros/op; (100000 of 100000 found)
+readseq      :      11.920 micros/op;  140.2 MB/s
+readreverse  :      27.807 micros/op;   60.7 MB/s
+compact      : 275873949.000 micros/op;
+readrandom   :      91.030 micros/op; (100000 of 100000 found)
+readseq      :       4.597 micros/op;  350.2 MB/s
+readreverse  :       9.662 micros/op;  171.9 MB/s
+fill100K     : skipped (--use_existing_db is true)
+crc32c       :      50.637 micros/op; 1212.7 MB/s (4K per op)
+snappycomp   :  130595.188 micros/op; (snappy failure)
+snappyuncomp : 2116163.000 micros/op; (snappy failure)
+11324	./test/dbbench
+11328	./test
+THREADS=32
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    100000
+RawSize:    11.1 MB (estimated)
+FileSize:   6.3 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+fillseq      : skipped (--use_existing_db is true)
+fillsync     : skipped (--use_existing_db is true)
+fillrandom   : skipped (--use_existing_db is true)
+overwrite    :    1799.604 micros/op;    1.9 MB/s
+readrandom   :     312.994 micros/op; (100000 of 100000 found)
+readrandom   :     243.445 micros/op; (100000 of 100000 found)
+readseq      :      22.548 micros/op;  147.7 MB/s
+readreverse  :      48.538 micros/op;   69.7 MB/s
+compact      : 190728140.000 micros/op;
+readrandom   :     180.821 micros/op; (100000 of 100000 found)
+readseq      :      10.861 micros/op;  310.7 MB/s
+readreverse  :      23.874 micros/op;  138.0 MB/s
+fill100K     : skipped (--use_existing_db is true)
+crc32c       :     128.154 micros/op;  957.1 MB/s (4K per op)
+snappycomp   :  311020.844 micros/op; (snappy failure)
+snappyuncomp : 9292167.000 micros/op; (snappy failure)
+11392	./test/dbbench
+11396	./test
+THREADS=64
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    100000
+RawSize:    11.1 MB (estimated)
+FileSize:   6.3 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+fillseq      : skipped (--use_existing_db is true)
+fillsync     : skipped (--use_existing_db is true)
+fillrandom   : skipped (--use_existing_db is true)
+overwrite    :    3611.317 micros/op;    2.0 MB/s
+readrandom   :     695.801 micros/op; (100000 of 100000 found)
+readrandom   :     518.545 micros/op; (100000 of 100000 found)
+readseq      :      51.057 micros/op;  131.9 MB/s
+readreverse  :      94.214 micros/op;   71.7 MB/s
+compact      : 598201655.000 micros/op;
+readrandom   :     396.252 micros/op; (100000 of 100000 found)
+readseq      :      23.079 micros/op;  281.3 MB/s
+readreverse  :      51.697 micros/op;  128.9 MB/s
+fill100K     : skipped (--use_existing_db is true)
+crc32c       :     273.349 micros/op;  902.7 MB/s (4K per op)
+snappycomp   :  605368.094 micros/op; (snappy failure)
+snappyuncomp : 39708444.000 micros/op; (snappy failure)
+11504	./test/dbbench
+11508	./test

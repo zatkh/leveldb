@@ -1,0 +1,306 @@
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    100000
+RawSize:    11.1 MB (estimated)
+FileSize:   6.3 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+fillseq      :      23.088 micros/op;    4.8 MB/s
+THREADS=1
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    100000
+RawSize:    11.1 MB (estimated)
+FileSize:   6.3 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+readwhilewriting :      37.049 micros/op; (100000 of 100000 found)
+24960	./test/dbbench
+24964	./test
+THREADS=2
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    100000
+RawSize:    11.1 MB (estimated)
+FileSize:   6.3 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+readwhilewriting :      70.108 micros/op; (100000 of 100000 found)
+44612	./test/dbbench
+44616	./test
+THREADS=4
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    100000
+RawSize:    11.1 MB (estimated)
+FileSize:   6.3 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+readwhilewriting :     115.318 micros/op; (100000 of 100000 found)
+48524	./test/dbbench
+48528	./test
+THREADS=8
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    100000
+RawSize:    11.1 MB (estimated)
+FileSize:   6.3 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+readwhilewriting :     162.663 micros/op; (100000 of 100000 found)
+40256	./test/dbbench
+40260	./test
+THREADS=16
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    100000
+RawSize:    11.1 MB (estimated)
+FileSize:   6.3 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+readwhilewriting :     438.484 micros/op; (100000 of 100000 found)
+46684	./test/dbbench
+46688	./test
+THREADS=32
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    100000
+RawSize:    11.1 MB (estimated)
+FileSize:   6.3 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+readwhilewriting :     674.473 micros/op; (100000 of 100000 found)
+30232	./test/dbbench
+30236	./test
+THREADS=64
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    100000
+RawSize:    11.1 MB (estimated)
+FileSize:   6.3 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+readwhilewriting :    1177.383 micros/op; (100000 of 100000 found)
+48476	./test/dbbench
+48480	./test
+
+
+
+pi@raspberrypi:~/ustar-sandbox/leveldb/build $ ./bench.sh >> ../base.log
+LevelDB:    version 1.22
+Date:       Sun Dec 29 15:45:17 2019
+CPU:        4 * ARMv7 Processor rev 4 (v7l)
+CPUCache:   
+... finiCommand being timed: "./db_bench --num=100000 --benchmarks=fillseq"
+	User time (seconds): 1.07
+	System time (seconds): 1.09
+	Percent of CPU this job got: 69%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.14
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 12280
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3253
+	Voluntary context switches: 151
+	Involuntary context switches: 45
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 47088
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+LevelDB:    version 1.22
+Date:       Sun Dec 29 15:45:20 2019
+CPU:        4 * ARMv7 Processor rev 4 (v7l)
+CPUCache:   
+... finiCommand being timed: "./db_bench --num=100000 --use_existing_db=1 --benchmarks=readwhilewriting --threads=1"
+	User time (seconds): 5.98
+	System time (seconds): 1.92
+	Percent of CPU this job got: 123%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.42
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 26784
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 6693
+	Voluntary context switches: 743
+	Involuntary context switches: 105
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 76408
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+LevelDB:    version 1.22
+Date:       Sun Dec 29 15:45:27 2019
+CPU:        4 * ARMv7 Processor rev 4 (v7l)
+CPUCache:   
+... finiCommand being timed: "./db_bench --num=100000 --use_existing_db=1 --benchmarks=readwhilewriting --threads=2"
+	User time (seconds): 15.90
+	System time (seconds): 5.16
+	Percent of CPU this job got: 201%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:10.44
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 25836
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 7514
+	Voluntary context switches: 6514
+	Involuntary context switches: 363
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 124808
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+LevelDB:    version 1.22
+Date:       Sun Dec 29 15:45:37 2019
+CPU:        4 * ARMv7 Processor rev 4 (v7l)
+CPUCache:   
+... finiCommand being timed: "./db_bench --num=100000 --use_existing_db=1 --benchmarks=readwhilewriting --threads=4"
+	User time (seconds): 30.84
+	System time (seconds): 13.40
+	Percent of CPU this job got: 319%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:13.83
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 31672
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 10339
+	Voluntary context switches: 35326
+	Involuntary context switches: 4564
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 145784
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+LevelDB:    version 1.22
+Date:       Sun Dec 29 15:45:51 2019
+CPU:        4 * ARMv7 Processor rev 4 (v7l)
+CPUCache:   
+... finiCommand being timed: "./db_bench --num=100000 --use_existing_db=1 --benchmarks=readwhilewriting --threads=8"
+	User time (seconds): 44.96
+	System time (seconds): 16.56
+	Percent of CPU this job got: 345%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:17.81
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 33268
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 9100
+	Voluntary context switches: 68343
+	Involuntary context switches: 13171
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 152072
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+LevelDB:    version 1.22
+Date:       Sun Dec 29 15:46:09 2019
+CPU:        4 * ARMv7 Processor rev 4 (v7l)
+CPUCache:   
+... finiCommand being timed: "./db_bench --num=100000 --use_existing_db=1 --benchmarks=readwhilewriting --threads=16"
+	User time (seconds): 123.11
+	System time (seconds): 45.57
+	Percent of CPU this job got: 360%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:46.79
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 29608
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 9034
+	Voluntary context switches: 200611
+	Involuntary context switches: 34462
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 300416
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+LevelDB:    version 1.22
+Date:       Sun Dec 29 15:46:56 2019
+CPU:        4 * ARMv7 Processor rev 4 (v7l)
+CPUCache:   
+... finiCommand being timed: "./db_bench --num=100000 --use_existing_db=1 --benchmarks=readwhilewriting --threads=32"
+	User time (seconds): 200.86
+	System time (seconds): 64.75
+	Percent of CPU this job got: 366%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:12.49
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 24512
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 7656
+	Voluntary context switches: 370328
+	Involuntary context switches: 54570
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 264896
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+LevelDB:    version 1.22
+Date:       Sun Dec 29 15:48:08 2019
+CPU:        4 * ARMv7 Processor rev 4 (v7l)
+CPUCache:   
+... finiCommand being timed: "./db_bench --num=100000 --use_existing_db=1 --benchmarks=readwhilewriting --threads=64"
+	User time (seconds): 368.73
+	System time (seconds): 97.17
+	Percent of CPU this job got: 385%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:00.83
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 22992
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 13922
+	Voluntary context switches: 650189
+	Involuntary context switches: 100479
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 304112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
