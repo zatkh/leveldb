@@ -669,6 +669,12 @@ class PosixEnv : public Env {
     new_thread.detach();
   }
 
+  void USTARStartThread(void (*thread_main)(void* thread_main_arg),
+                   void* thread_main_arg) override {
+    std::thread new_thread(thread_main, thread_main_arg);
+    new_thread.detach();
+  }
+
   Status GetTestDirectory(std::string* result) override {
     const char* env = std::getenv("TEST_TMPDIR");
     if (env && env[0] != '\0') {

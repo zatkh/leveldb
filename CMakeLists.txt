@@ -30,6 +30,9 @@ else (WIN32)
   set(LEVELDB_PLATFORM_NAME LEVELDB_PLATFORM_POSIX)
 endif (WIN32)
 
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC -Wno-unused-variable -Wno-unused-parameter -Wno-unused-function -Wimplicit-fallthrough=0 -DHAVE_CONFIG_H")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
 option(LEVELDB_BUILD_TESTS "Build LevelDB's unit tests" ON)
 option(LEVELDB_BUILD_BENCHMARKS "Build LevelDB's benchmarks" ON)
 option(LEVELDB_INSTALL "Install LevelDB's header and library" ON)
@@ -192,6 +195,10 @@ target_sources(leveldb
     "util/options.cc"
     "util/random.h"
     "util/status.cc"
+    "util/ustar_cache.cc"
+    "util/difc_mem.c"
+    "util/difc_api.c"
+
 
   # Only CMake 3.3+ supports PUBLIC sources in targets exported by "install".
   $<$<VERSION_GREATER:CMAKE_VERSION,3.2>:PUBLIC>
@@ -225,6 +232,7 @@ else (WIN32)
       "util/posix_logger.h"
   )
 endif (WIN32)
+
 
 # MemEnv is not part of the interface and could be pulled to a separate library.
 target_sources(leveldb

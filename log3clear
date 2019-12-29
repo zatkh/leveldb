@@ -1,0 +1,29 @@
+Keys:       16 bytes each
+Values:     100 bytes each (50 bytes after compression)
+Entries:    1000000
+RawSize:    110.6 MB (estimated)
+FileSize:   62.9 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+fillseq      :       2.112 micros/op;   52.4 MB/s
+THREADS=1
+6268	./test/dbbench
+6272	./test
+THREADS=2
+9616	./test/dbbench
+9620	./test
+THREADS=4
+12372	./test/dbbench
+12376	./test
+THREADS=8
+15008	./test/dbbench
+15012	./test
+THREADS=16
+18292	./test/dbbench
+18296	./test
+THREADS=32
+20312	./test/dbbench
+20316	./test
+THREADS=64
+20096	./test/dbbench
+20100	./test

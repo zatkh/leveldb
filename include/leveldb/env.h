@@ -171,6 +171,8 @@ class LEVELDB_EXPORT Env {
   // Start a new thread, invoking "function(arg)" within the new thread.
   // When "function(arg)" returns, the thread will be destroyed.
   virtual void StartThread(void (*function)(void* arg), void* arg) = 0;
+    virtual void USTARStartThread(void (*function)(void* arg), void* arg) = 0;
+
 
   // *path is set to a temporary directory that can be used for testing. It may
   // or may not have just been created. The directory may or may not differ
@@ -357,6 +359,10 @@ class LEVELDB_EXPORT EnvWrapper : public Env {
   }
   void StartThread(void (*f)(void*), void* a) override {
     return target_->StartThread(f, a);
+  }
+
+    void USTARStartThread(void (*f)(void*), void* a) override {
+    return target_->USTARStartThread(f, a);
   }
   Status GetTestDirectory(std::string* path) override {
     return target_->GetTestDirectory(path);
