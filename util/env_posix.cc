@@ -35,6 +35,14 @@
 #include "util/env_posix_test_helper.h"
 #include "util/posix_logger.h"
 
+
+extern "C" {
+#include "difc_api.h"
+#include "difc_mem.h"
+
+}
+#include "mpt.h"
+
 namespace leveldb {
 
 namespace {
@@ -665,12 +673,55 @@ class PosixEnv : public Env {
 
   void StartThread(void (*thread_main)(void* thread_main_arg),
                    void* thread_main_arg) override {
+                     char *memblock = NULL;
+        size_t alignment = 1024 * 1024;
+
+
+    int udom_id = udom_create();
+       
+   // printf("allocated udom: %d \n", udom_id);
+
+    void* addr= (void*)0x100000;
+     memblock= (char*) udom_mmap(udom_id,addr , (alignment), 
+                                PROT_READ | PROT_WRITE,MAP_PRIVATE | MAP_ANONYMOUS , 0, 0);
+  udom_mprotect(udom_id,addr,alignment,PROT_READ | PROT_WRITE);
+   // printf("[memblock] base is %p\n", memblock);   
+               
+if( memblock == MAP_FAILED ) {
+    fprintf(stderr, "Failed to udom_create using mmap for udom %d\n", udom_id);
+    memblock = NULL;
+}
+    munmap(memblock,(alignment));
+
+    sys_udom_free(udom_id);
     std::thread new_thread(thread_main, thread_main_arg);
     new_thread.detach();
   }
 
   void USTARStartThread(void (*thread_main)(void* thread_main_arg),
                    void* thread_main_arg) override {
+
+    char *memblock = NULL;
+        size_t alignment = 1024 * 1024;
+
+
+    int udom_id = udom_create();
+       
+    printf("allocated udom: %d \n", udom_id);
+
+    void* addr= NULL;//(void*)0x100000;
+     memblock= (char*) udom_mmap(udom_id,addr , (alignment), 
+                                PROT_READ | PROT_WRITE,MAP_PRIVATE | MAP_ANONYMOUS , 0, 0);
+  udom_mprotect(udom_id,addr,alignment,PROT_READ | PROT_WRITE);
+    printf("[memblock] base is %p\n", memblock);   
+               
+if( memblock == MAP_FAILED ) {
+    fprintf(stderr, "Failed to udom_create using mmap for udom %d\n", udom_id);
+    memblock = NULL;
+}
+    munmap(memblock,(alignment));
+
+    sys_udom_free(udom_id);
     std::thread new_thread(thread_main, thread_main_arg);
     new_thread.detach();
   }

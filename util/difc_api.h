@@ -1,6 +1,10 @@
 #ifndef _UAPI_DIFC_H
 #define _UAPI_DIFC_H
 
+#ifndef _GNU_SOURCE
+#define _GNU_SOURCE
+#endif
+
 #include <inttypes.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -11,10 +15,7 @@
 #include <sys/stat.h>
 #include <sys/syscall.h>
 #include <sys/types.h>
-#ifndef _GNU_SOURCE
-#define _GNU_SOURCE  
 #include <linux/sched.h> 
-#endif
 #include <sched.h>
 #include </usr/include/linux/sched.h>
 
